@@ -1,11 +1,11 @@
 import React from "react";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      {/* <a className="navbar-brand" href="#">
         Business Wire Platform
-      </a>
+      </a> */}
       <button
         className="navbar-toggler"
         type="button"
@@ -39,6 +39,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
