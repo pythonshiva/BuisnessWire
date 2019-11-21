@@ -22,6 +22,10 @@
   color: #f1f1f1;
 }
 
+hr {
+  border: 0.2px solid grey;
+}
+
 #brandName {
   font-size: 3rem;
 }
@@ -32,5 +36,11 @@
   }
   .sidenav a {
     font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .sidenav {
+    display: none;
   }
 }
