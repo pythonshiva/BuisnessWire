@@ -1,44 +1,29 @@
 import React from "react";
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button
+} from "react-bootstrap";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      {/* <a className="navbar-brand" href="#">
-        Business Wire Platform
-      </a> */}
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Sign In <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Help <span className="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">BWP</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#link" className="text-primary">
+            Sign In
+          </Nav.Link>
+          <Nav.Link href="Help">Help</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;

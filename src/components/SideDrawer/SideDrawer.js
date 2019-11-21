@@ -4,10 +4,13 @@ import "./SideDrawer.css";
 const SideDrawer = () => {
   return (
     <div className="sidenav">
-      <p>
-        <a href="#">Business Wire Platform</a>
-      </p>
-      <hr className="ruler" />
+      <span className="brand-logo">
+        <span className="text-info" id="brandName">
+          BWP
+        </span>
+        <span className="text-info">Business Wire Platform</span>
+      </span>
+      <hr />
       <a href="#">Home</a>
       <a className="text-info" href="#">
         Sign In

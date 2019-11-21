@@ -1,6 +1,6 @@
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -20,6 +20,10 @@
 
 .sidenav a:hover {
   color: #f1f1f1;
+}
+
+#brandName {
+  font-size: 3rem;
 }
 
 @media screen and (max-height: 450px) {
