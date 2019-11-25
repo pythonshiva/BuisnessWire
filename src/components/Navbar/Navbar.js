@@ -1,27 +1,34 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button
-} from "react-bootstrap";
+import DrawerButton from "../SideDrawer/DrawerButton";
 
-const NavBar = () => {
+import "./Navbar.css";
+
+const NavBar = props => {
   return (
-    <Navbar bg="light" expand="lg" style={{ fontSize: 20, height: 84 }}>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mx-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link" className="text-primary" id="paddingClass">
-            Sign In
-          </Nav.Link>
-          <Nav.Link href="Help">Help</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <header className="toolbar">
+      <nav className="toolbar-navigation">
+        <div className="toolbar-toggle-button">
+          <DrawerButton click={props.drawerClickHandler} />
+        </div>
+        <div className="toolbar-logo">
+          <a href="/">BWP</a>
+        </div>
+        <div className="separator" />
+        <div className="toolbar-navigation-items">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/">Sign In</a>
+            </li>
+            <li>
+              <a href="/">Help</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 };
 
