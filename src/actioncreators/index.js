@@ -4,19 +4,7 @@ import { AWS_URL } from "../constants/constant";
 export const fetchAwsData = () => {
   return async dispatch => {
     return await axios(AWS_URL, {
-      method: "GET",
-      mode: "no-cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json"
-      }
-      // headers: {
-      //   // Accept: "application/json",
-      //   // "Content-Type": "application/json",
-      //   // "X-Api-Key": AWS_SECRET
-      //   // "Content-Type": "application/json",
-      //   // "x-api-key": "JnHQ7LPCec2oxQ1Awu70e2nxGWtZuZbN31uffmYi"
-      // }
+      method: "GET"
     }).then(response => {
       dispatch(helloWorld(response.data.data));
       console.log("Response is", response.data.data);
