@@ -1,11 +1,8 @@
-let defaultState = {
-  value: 123
-};
-
-const rootReducer = (state = defaultState, action) => {
+const rootReducer = (state = [], action) => {
   if (action.type === "HELLO_WORLD") {
     return {
-      ...state
+      ...state,
+      value: action.value
     };
   } else {
     return {
