@@ -4,7 +4,10 @@ import { AWS_URL } from "../constants/constant";
 export const fetchAwsData = () => {
   return async dispatch => {
     return await axios(AWS_URL, {
-      method: "GET"
+      method: "GET",
+      headers: {
+      "x-api-key": "
+JnHQ7LPCec2oxQ1Awu70e2nxGWtZuZbN31uffmYi"},
     }).then(response => {
       dispatch(helloWorld(response.data.data));
       console.log("Response is", response.data.data);
